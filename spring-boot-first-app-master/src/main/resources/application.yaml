@@ -1,0 +1,33 @@
+server:
+  port: ${port:8088}
+spring:
+  application:
+    name: First-Boot-Application
+    
+management:
+    endpoints:
+        web:
+            exposure: 
+                include: info,health,metrics,loggers,beans,mappings
+        health:
+            show-details: always
+                
+                    
+#  devtools:
+#    restart:
+#      exclude: static/**
+#logging:
+#  pattern:
+#    console: "%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"
+#    file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+#  level:
+#    org.springframework.web: DEBUG
+#management:
+#  security:
+#    enabled: false
+#  endpoints:
+#    metrics:
+#      enabled: true
+#    web:
+#      exposure:
+#        include: "*"
